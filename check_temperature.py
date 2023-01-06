@@ -10,4 +10,4 @@ def check_temperature(temp,unit):
 	breach_range_value = get_breach_range(temp,upperLimit,lowerLimit)
 	message = MESSAGES[breach_range_value]
 	print(message)
-	return !(breach_range_value == 1 or breach_range_value == 5)
+	return not (breach_range_value == 1 or breach_range_value == 5)
