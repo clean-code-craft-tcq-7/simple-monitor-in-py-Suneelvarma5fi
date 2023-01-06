@@ -6,4 +6,4 @@ def check_soc(SOC):
 	breach_range_value = get_breach_range(SOC,upperLimit,lowerLimit)
 	message = MESSAGES[breach_range_value]
 	print(message)
-	return !(breach_range_value = 1 or breach_range_value = 5)
+	return !(breach_range_value == 1 or breach_range_value == 5)
