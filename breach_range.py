@@ -5,7 +5,11 @@ def get_breach_range(value, ulimit,llimit):
 		return 1
 	elif value > ulimit:
 		return 5
-	elif (value == llimit or value <= llimit+warning_limit):
+	else:
+		return get_valid_range(value,ulimit,llimit)
+	
+def get_valid_range(value,ulimit,llimit):
+	if (value == llimit or value <= llimit+warning_limit):
 		return 2
 	elif (value == ulimit or value <= llimit-warning_limit):
 		return 4
